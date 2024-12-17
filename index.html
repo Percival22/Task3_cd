@@ -169,14 +169,14 @@
 
         // Event tracking for LinkedIn and GitHub links
         document.querySelector('a[href*="linkedin"]').addEventListener('click', function () {
-            gtag('event', 'social_click', {
+            gtag('event', 'linkedin_click', {
                 'event_category': 'Social Links',
                 'event_label': 'LinkedIn Click',
             });
         });
 
         document.querySelector('a[href*="github"]').addEventListener('click', function () {
-            gtag('event', 'social_click', {
+            gtag('event', 'github_click', {
                 'event_category': 'Social Links',
                 'event_label': 'GitHub Click',
             });
