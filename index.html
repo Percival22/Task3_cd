@@ -147,17 +147,7 @@
         </form>
     </section>
 
-    <!-- Google Analytics Integration -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-QCX3G9KSPC');
-
-        // Event tracking for form submission
+           // Event tracking for form submission
         document.getElementById('submitForm').addEventListener('click', function () {
             gtag('event', 'form_submission', {
                 'event_category': 'Contact Form',
