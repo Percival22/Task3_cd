@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parshv Jain | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background: #007acc;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parshv Jain</h1>
+        <p>Aspiring Product Manager | Automotive Engineering Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I am a B.Tech student specializing in Automotive Engineering with a minor in Machine Learning. I have a strong passion for data analysis, product management, and technology-driven solutions.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech (Automotive Engineering, Minor: Machine Learning)</strong> - Delhi Technological University (2025) - 7.53 CGPA</li>
+            <li><strong>Class XII (C.B.S.E.)</strong> - Summer Fields School, GK-1 (2020) - 90%</li>
+            <li><strong>Class X (C.B.S.E.)</strong> - Summer Fields School, GK-1 (2018) - 90%</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Business Development Intern | Finladder</strong> (Dec 2022 – Jan 2023)</li>
+            <li><strong>Marketing Intern | Unistal Global</strong> (May 2023 - Jul 2023)</li>
+            <li><strong>Product Management Intern | Innovatia</strong> (Oct 2021 - Jan 2022)</li>
+            <li><strong>UBGA Store</strong> - Established and scaled an online toy store.</li>
+            <li><strong>Co-Founder | Bubbl Social</strong> - Co-founded a college-based social media platform.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Sales Performance Dashboard</strong> - Created an interactive dashboard in Power BI.</li>
+            <li><strong>Housing Price Prediction Model</strong> - Developed a regression model using Python.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: parshv22@gmail.com</p>
+        <p>Phone: +91-9205014259</p>
+        <p>
+            <a href="https://linkedin.com/in/parshv-j" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/parshv22" target="_blank">GitHub</a>
+        </p>
+
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" id="submitForm">Submit</button>
+        </form>
+    </section>
+
+    <!-- Google Analytics Integration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+
+        // Event tracking for form submission
+        document.getElementById('submitForm').addEventListener('click', function () {
+            gtag('event', 'form_submission', {
+                'event_category': 'Contact Form',
+                'event_label': 'Submit Button Click',
+            });
+        });
+
+        // Event tracking for LinkedIn and GitHub links
+        document.querySelector('a[href*="linkedin"]').addEventListener('click', function () {
+            gtag('event', 'social_click', {
+                'event_category': 'Social Links',
+                'event_label': 'LinkedIn Click',
+            });
+        });
+
+        document.querySelector('a[href*="github"]').addEventListener('click', function () {
+            gtag('event', 'social_click', {
+                'event_category': 'Social Links',
+                'event_label': 'GitHub Click',
+            });
+        });
+    </script>
+</body>
+</html>
